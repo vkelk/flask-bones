@@ -1,9 +1,15 @@
 import os
+from dotenv import load_dotenv
+
+
+APP_DIR = os.path.abspath(os.path.join(os.path.abspath(__file__), os.pardir))
+PROJECT_DIR = os.path.abspath(os.path.join(APP_DIR, os.pardir))
+load_dotenv(os.path.join(PROJECT_DIR, '.env'))
 
 
 class base_config(object):
     """Default configuration options."""
-    SITE_NAME = 'Flask Bones'
+    SITE_NAME = os.environ.get('SITE_NAME', 'Flask Bones')
 
     SECRET_KEY = os.environ.get('SECRET_KEY', 'secrets')
     SERVER_NAME = os.environ.get('SERVER_NAME', 'app.docker:5000')
@@ -33,12 +39,13 @@ class base_config(object):
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    SUPPORTED_LOCALES = ['en']
+    SUPPORTED_LOCALES = ['en', 'mk']
 
 
 class dev_config(base_config):
     """Development configuration options."""
     ASSETS_DEBUG = True
+    DEBUG = True
     WTF_CSRF_ENABLED = False
 
 
