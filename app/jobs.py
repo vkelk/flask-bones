@@ -20,3 +20,8 @@ def send_registration_email(uid, token):
         token=token
     )
     mail.send(msg)
+
+
+@rq.job
+def default_queue():
+    return rq.get_queue()

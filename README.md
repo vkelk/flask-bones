@@ -66,7 +66,7 @@ def send_email(msg):
 
 Start a worker:
 ```bash
-flask rq worker
+flask rq worker default
 ```
 
 Queue the job for processing:

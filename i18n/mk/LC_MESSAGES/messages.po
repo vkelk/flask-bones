@@ -1,17 +1,18 @@
-# Translations template for PROJECT.
+# Macedonian translations for PROJECT.
 # Copyright (C) 2018 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2018-05-22 14:15+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-05-22 14:23+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: mk\n"
+"Language-Team: mk <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,27 +20,27 @@ msgstr ""
 
 #: app/auth/forms.py:10 app/user/forms.py:10
 msgid "Username"
-msgstr ""
+msgstr "Корисник"
 
 #: app/auth/forms.py:11 app/user/forms.py:22
 msgid "Password"
-msgstr ""
+msgstr "Лозинка"
 
 #: app/auth/forms.py:25
 msgid "Unknown username"
-msgstr ""
+msgstr "Непознат корисник"
 
 #: app/auth/forms.py:29
 msgid "Invalid password"
-msgstr ""
+msgstr "Невалидна лозинка"
 
 #: app/auth/forms.py:33
 msgid "User not activated"
-msgstr ""
+msgstr "Непостоечки корисник"
 
 #: app/auth/views.py:27
 msgid "You were logged in as {username}"
-msgstr ""
+msgstr "Вие сте најавени како {username}"
 
 #: app/auth/views.py:41
 msgid "You were logged out"
