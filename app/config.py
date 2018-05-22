@@ -28,7 +28,7 @@ class base_config(object):
     POSTGRES_PORT = os.environ.get('POSTGRES_PORT', 5432)
     POSTGRES_USER = os.environ.get('DB_ENV_USER', 'postgres')
     POSTGRES_PASS = os.environ.get('DB_ENV_PASS', 'postgres')
-    POSTGRES_DB = 'postgres'
+    POSTGRES_DB = os.environ.get('POSTGRES_DB', 'postgres')
 
     SQLALCHEMY_DATABASE_URI = 'postgresql://%s:%s@%s:%s/%s' % (
         POSTGRES_USER,

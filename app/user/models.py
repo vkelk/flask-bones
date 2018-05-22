@@ -20,6 +20,7 @@ class User(CRUDMixin, UserMixin, db.Model):
         default=datetime.datetime.utcnow
     )
     remote_addr = db.Column(db.String(20))
+    client_id = db.Column(db.Integer)
     active = db.Column(db.Boolean())
     is_admin = db.Column(db.Boolean())
 
