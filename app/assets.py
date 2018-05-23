@@ -1,5 +1,6 @@
 from flask_assets import Bundle, Environment, Filter
 
+
 class ConcatFilter(Filter):
     """
     Filter that merges files, placing a semicolon between them.
@@ -9,6 +10,7 @@ class ConcatFilter(Filter):
     """
     def concat(self, out, hunks, **kw):
         out.write(';'.join([h.data() for h, info in hunks]))
+
 
 js = Bundle(
     'node_modules/jquery/dist/jquery.js',
@@ -24,7 +26,7 @@ css = Bundle(
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/font-awesome/css/font-awesome.css',
     'css/style.css',
-    filters=('cssmin','cssrewrite'),
+    filters=('cssmin', 'cssrewrite'),
     output='gen/packed.css'
 )
 
