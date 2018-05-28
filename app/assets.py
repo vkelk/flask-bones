@@ -25,6 +25,7 @@ js = Bundle(
 css = Bundle(
     'node_modules/bootstrap/dist/css/bootstrap.css',
     'node_modules/font-awesome/css/font-awesome.css',
+    'css/icons/icomoon/styles.css',
     'css/style.css',
     filters=('cssmin', 'cssrewrite'),
     output='gen/packed.css'
