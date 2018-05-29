@@ -39,8 +39,7 @@ def create_app(config=config.base_config):
         if user is not None:
             return user.locale
         # otherwise try to guess the language from the user accept
-        # header the browser transmits.  We support de/fr/en in this
-        # example.  The best match wins.
+        # header the browser transmits.
         return request.accept_languages.best_match(config.SUPPORTED_LOCALES)
 
     @app.before_request

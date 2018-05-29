@@ -41,6 +41,7 @@ class base_config(object):
 
     SUPPORTED_LOCALES = ['mk', 'en']
     BABEL_DEFAULT_LOCALE = 'mk'
+    JINJA_EXTENSIONS = ['jinja2.ext.i18n']
 
 
 class dev_config(base_config):

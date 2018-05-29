@@ -49,3 +49,8 @@ def recreate_db():
     """Same as running drop_db() and create_db()."""
     drop_db()
     create_db()
+
+
+def translate():
+    """Translation and localization commands."""
+    pass
