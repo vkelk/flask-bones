@@ -39,7 +39,8 @@ class base_config(object):
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    SUPPORTED_LOCALES = ['en', 'mk']
+    SUPPORTED_LOCALES = ['mk', 'en']
+    BABEL_DEFAULT_LOCALE = 'mk'
 
 
 class dev_config(base_config):

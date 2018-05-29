@@ -25,12 +25,23 @@ def create_app(config=config.base_config):
     register_jinja_env(app)
     register_commands(app)
 
-    def get_locale():
-        """Returns the locale to be used for the incoming request."""
-        return request.accept_languages.best_match(config.SUPPORTED_LOCALES)
+    # def get_locale():
+    #     """Returns the locale to be used for the incoming request."""
+    #     return request.accept_languages.best_match(config.SUPPORTED_LOCALES)
 
-    if babel.locale_selector_func is None:
-        babel.locale_selector_func = get_locale
+    # if babel.locale_selector_func is None:
+    #     babel.locale_selector_func = get_locale
+
+    @babel.localeselector
+    def get_locale():
+        # if a user is logged in, use the locale from the user settings
+        user = getattr(g, 'user', None)
+        if user is not None:
+            return user.locale
+        # otherwise try to guess the language from the user accept
+        # header the browser transmits.  We support de/fr/en in this
+        # example.  The best match wins.
+        return request.accept_languages.best_match(config.SUPPORTED_LOCALES)
 
     @app.before_request
     def before_request():

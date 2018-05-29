@@ -56,15 +56,15 @@ msgstr ""
 
 #: app/auth/templates/login.html:4 app/auth/templates/login.html:22
 msgid "Login"
-msgstr ""
+msgstr "Најава"
 
 #: app/auth/templates/login.html:24
 msgid "or"
-msgstr ""
+msgstr "или"
 
 #: app/auth/templates/login.html:25 app/auth/templates/register.html:4
 msgid "Register"
-msgstr ""
+msgstr "Регистрација"
 
 #: app/auth/templates/register.html:32
 msgid "Submit"
@@ -72,15 +72,15 @@ msgstr ""
 
 #: app/templates/layout.html:23
 msgid "Terms"
-msgstr ""
+msgstr "Услови"
 
 #: app/templates/layout.html:24
 msgid "Privacy"
-msgstr ""
+msgstr "Приватност"
 
 #: app/templates/layout.html:25
 msgid "Security"
-msgstr ""
+msgstr "Сигурност"
 
 #: app/templates/errors/401.html:3 app/templates/errors/401.html:9
 msgid "Unauthorized"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: app/templates/errors/404.html:9
 msgid "Page Not Found"
-msgstr ""
+msgstr "Страната не постои"
 
 #: app/templates/errors/404.html:10
 msgid "What you were looking for is just not there."
