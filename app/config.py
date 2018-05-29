@@ -12,7 +12,7 @@ class base_config(object):
     SITE_NAME = os.environ.get('SITE_NAME', 'Flask Bones')
 
     SECRET_KEY = os.environ.get('SECRET_KEY', 'secrets')
-    SERVER_NAME = os.environ.get('SERVER_NAME', 'localhost')
+    # SERVER_NAME = os.environ.get('SERVER_NAME', 'localhost')
 
     MAIL_SERVER = os.environ.get('MAIL_SERVER', 'mail')
     MAIL_PORT = os.environ.get('MAIL_PORT', 1025)
@@ -46,7 +46,7 @@ class dev_config(base_config):
     """Development configuration options."""
     ASSETS_DEBUG = False
     DEBUG = True
-    SERVER_NAME = 'localhost:5000'
+    # SERVER_NAME = 'localhost:5000'
     WTF_CSRF_ENABLED = False
 
 
