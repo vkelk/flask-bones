@@ -44,11 +44,11 @@ msgstr "Вие сте најавени како {username}"
 
 #: app/auth/views.py:41
 msgid "You were logged out"
-msgstr ""
+msgstr "Вие сте одјавени"
 
 #: app/auth/views.py:64
 msgid "Sent verification email to {email}"
-msgstr ""
+msgstr "Испратен е верификационен е-маил на {email}"
 
 #: app/auth/views.py:91
 msgid "Registered user {username}. Please login to continue."
@@ -68,7 +68,7 @@ msgstr "Регистрација"
 
 #: app/auth/templates/register.html:32
 msgid "Submit"
-msgstr ""
+msgstr "Испрати"
 
 #: app/templates/layout.html:23 app/templates/layout.html:24
 msgid "Terms"
@@ -88,7 +88,7 @@ msgstr ""
 
 #: app/templates/errors/401.html:10
 msgid "You're not allowed to do this."
-msgstr ""
+msgstr "Вам ова не ви е дозволено."
 
 #: app/templates/errors/401.html:11 app/templates/errors/404.html:11
 #: app/templates/errors/500.html:11
@@ -105,7 +105,7 @@ msgstr ""
 
 #: app/templates/errors/500.html:3 app/templates/errors/500.html:9
 msgid "Internal Server Error"
-msgstr ""
+msgstr "Грешка на серверот"
 
 #: app/templates/errors/500.html:10
 msgid "Something blew up."
@@ -117,15 +117,15 @@ msgstr ""
 
 #: app/user/forms.py:27
 msgid "Passwords must match"
-msgstr ""
+msgstr "Лозинките не се исти"
 
 #: app/user/forms.py:33
 msgid "Confirm Password"
-msgstr ""
+msgstr "Потврди лозинка"
 
 #: app/user/forms.py:36
 msgid "I accept the TOS"
-msgstr ""
+msgstr "Јас ги прифаќам усолвите за користење на сервисот"
 
 #: app/user/forms.py:50
 msgid "Username already registered"
