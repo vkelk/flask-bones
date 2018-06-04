@@ -1,21 +1,25 @@
+
 {% set nav = [
-    ('Users', 'user.list'),
+    ('News', 'prasha.news'),
+    ('Archive', 'prasha.archive'),
+    ('Clipping', 'prasha.clipping'),
+    ('Analysis', 'prasha.analysis'),
 ] %}
 
-<div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ url_for('index') }}">{{ config.SITE_NAME }}
-                <i class="fa fa-question-circle" aria-hidden="true"></i>
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fa fa-question-circle" data-fa-transform="rotate-180"></i> {{ config.SITE_NAME | upper}}
             </a>
         </div>
         <div class="navbar-collapse collapse">
-            {% if current_user.is_admin -%}
+            {% if current_user.is_authenticated -%}
                 <ul class="nav navbar-nav">
                     {% for title, endpoint in nav %}
                         {% if endpoint == request.endpoint %}
@@ -28,9 +32,19 @@
             {%- endif %}
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated -%}
-                    <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <span>{{current_user.email}}</span>
+                            <i class="caret"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#"><i class="icon-cog5"></i> {% trans %}Account settings{% endtrans %}</a></li>
+                            <li><a href="{{ url_for('auth.logout') }}"><i class="icon-switch2"></i> {% trans %}Logout{% endtrans %}</a></li>
+                        </ul>
+                    </li>
                 {% else %}
-                    <li><a href="{{ url_for('auth.login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('auth.login') }}">{% trans %}Log In{% endtrans %}</a></li>
                 {%- endif %}
             </ul>
         </div>

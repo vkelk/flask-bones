@@ -4,19 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title -%}{%- endblock %}</title>
-    {% assets "js_all" -%}
-        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
-    {%- endassets %}
     {% assets "css_all" -%}
         <link rel="stylesheet" href="{{ ASSET_URL }}">
     {%- endassets %}
+    {% assets "js_all" -%}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {%- endassets %}
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script> -->
 </head>
 <body class="layout-boxed">
     {% include 'components/menu.html' %}
     <div class="container">
         {% include 'components/flash.html' %}
-        {% block header -%}{%- endblock %}
+        <!-- Page header -->
+	    <div class="page-header">
+            <div class="page-header-content">
+            {% block header -%}{%- endblock %}
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Page container -->
+	    <div class="page-container">
+            <!-- Page content -->
+            <div class="page-content">
+                <!-- Main content -->
+                <div class="content-wrapper">
         {% block body -%}{%- endblock %}
+                </div>
+                <!-- /main content -->
+            </div>
+            <!-- /page content -->
+        </div>
+        <!-- /page container -->
+
+        <!-- Footer -->
+	    <div class="footer footer-boxed text-muted">
         {% block footer -%}{%- endblock %}
         <hr />
         <ul class="list-inline text-center">
@@ -25,6 +48,9 @@
             <li><a href="#">{% trans %}Security{% endtrans%}</a></li>
             <li><span class="text-muted"><i class="fa fa-clock-o"></i> {{ g.request_time() }}</span></li>
         </ul>
+        </div>
+        <!-- /footer -->
+        
     </div>
 </body>
 </html>

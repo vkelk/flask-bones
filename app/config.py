@@ -46,7 +46,7 @@ class base_config(object):
 
 class dev_config(base_config):
     """Development configuration options."""
-    ASSETS_DEBUG = False
+    ASSETS_DEBUG = True
     DEBUG = True
     # SERVER_NAME = 'localhost:5000'
     WTF_CSRF_ENABLED = False

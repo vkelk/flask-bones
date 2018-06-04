@@ -10,6 +10,7 @@ from app.auth import auth
 from app.commands import create_db, drop_db, populate_db, recreate_db
 from app.database import db
 from app.extensions import lm, travis, mail, migrate, bcrypt, babel, rq, limiter
+from app.prasha import prasha
 from app.user import user
 from app.utils import url_for_other_page
 
@@ -53,7 +54,7 @@ def create_app(config=config.base_config):
     def index():
         """Returns the applications index page."""
         return render_template('index.html')
-
+    print(app.url_map)
     return app
 
 
@@ -81,6 +82,7 @@ def register_blueprints(app):
     """Register blueprints with the Flask application."""
     app.register_blueprint(user, url_prefix='/user')
     app.register_blueprint(auth)
+    app.register_blueprint(prasha)
 
 
 def register_errorhandlers(app):

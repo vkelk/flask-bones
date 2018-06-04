@@ -27,7 +27,8 @@ js = Bundle(
 css = Bundle(
     'css/icons/icomoon/styles.css',
     'node_modules/font-awesome/css/font-awesome.css',
-    'node_modules/bootstrap/dist/css/bootstrap.css',
+    # 'node_modules/bootstrap/dist/css/bootstrap.css',
+    'css/bootstrap.css',
     'css/core.css',
     'css/components.css',
     'css/colors.css',
