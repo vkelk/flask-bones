@@ -1,9 +1,9 @@
 
 {% set nav = [
-    ('News', 'prasha.news'),
-    ('Archive', 'prasha.archive'),
-    ('Clipping', 'prasha.clipping'),
-    ('Analysis', 'prasha.analysis'),
+    (_('News'), 'prasha.news'),
+    (_('Archive'), 'prasha.archive'),
+    (_('Clipping'), 'prasha.clipping'),
+    (_('Analysis'), 'prasha.analysis'),
 ] %}
 
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -15,7 +15,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ url_for('index') }}">
-                <i class="fa fa-question-circle" data-fa-transform="rotate-180"></i> {{ config.SITE_NAME | upper}}
+                <i class="fa fa-question-circle fa-lg rotate-180" ></i> {{ config.SITE_NAME | upper}}
             </a>
         </div>
         <div class="navbar-collapse collapse">

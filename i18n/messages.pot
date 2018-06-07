@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-29 12:43+0200\n"
+"POT-Creation-Date: 2018-06-07 11:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,8 @@ msgstr ""
 msgid "Registered user {username}. Please login to continue."
 msgstr ""
 
-#: app/auth/templates/login.html:4 app/auth/templates/login.html:22
+#: app/auth/templates/login.html:4 app/auth/templates/login.html:13
+#: app/auth/templates/login.html:22
 msgid "Login"
 msgstr ""
 
@@ -62,6 +63,7 @@ msgid "or"
 msgstr ""
 
 #: app/auth/templates/login.html:25 app/auth/templates/register.html:4
+#: app/auth/templates/register.html:14
 msgid "Register"
 msgstr ""
 
@@ -69,16 +71,44 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: app/templates/layout.html:23 app/templates/layout.html:24
+#: app/templates/layout.html:46
 msgid "Terms"
 msgstr ""
 
-#: app/templates/layout.html:25
+#: app/templates/layout.html:47
 msgid "Privacy"
 msgstr ""
 
-#: app/templates/layout.html:26
+#: app/templates/layout.html:48
 msgid "Security"
+msgstr ""
+
+#: app/templates/components/menu.html:3
+msgid "News"
+msgstr ""
+
+#: app/templates/components/menu.html:4
+msgid "Archive"
+msgstr ""
+
+#: app/templates/components/menu.html:5
+msgid "Clipping"
+msgstr ""
+
+#: app/templates/components/menu.html:6
+msgid "Analysis"
+msgstr ""
+
+#: app/templates/components/menu.html:42
+msgid "Account settings"
+msgstr ""
+
+#: app/templates/components/menu.html:43
+msgid "Logout"
+msgstr ""
+
+#: app/templates/components/menu.html:47
+msgid "Log In"
 msgstr ""
 
 #: app/templates/errors/401.html:3 app/templates/errors/401.html:9

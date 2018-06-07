@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-29 12:43+0200\n"
+"POT-Creation-Date: 2018-06-07 11:01+0200\n"
 "PO-Revision-Date: 2018-05-22 14:23+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: mk\n"
@@ -54,7 +54,8 @@ msgstr "Испратен е верификационен е-маил на {email
 msgid "Registered user {username}. Please login to continue."
 msgstr ""
 
-#: app/auth/templates/login.html:4 app/auth/templates/login.html:22
+#: app/auth/templates/login.html:4 app/auth/templates/login.html:13
+#: app/auth/templates/login.html:22
 msgid "Login"
 msgstr "Најава"
 
@@ -63,6 +64,7 @@ msgid "or"
 msgstr "или"
 
 #: app/auth/templates/login.html:25 app/auth/templates/register.html:4
+#: app/auth/templates/register.html:14
 msgid "Register"
 msgstr "Регистрација"
 
@@ -70,17 +72,45 @@ msgstr "Регистрација"
 msgid "Submit"
 msgstr "Испрати"
 
-#: app/templates/layout.html:23 app/templates/layout.html:24
+#: app/templates/layout.html:46
 msgid "Terms"
 msgstr "Услови"
 
-#: app/templates/layout.html:25
+#: app/templates/layout.html:47
 msgid "Privacy"
 msgstr "Приватност"
 
-#: app/templates/layout.html:26
+#: app/templates/layout.html:48
 msgid "Security"
 msgstr "Сигурност"
+
+#: app/templates/components/menu.html:3
+msgid "News"
+msgstr "Вести"
+
+#: app/templates/components/menu.html:4
+msgid "Archive"
+msgstr "Архива"
+
+#: app/templates/components/menu.html:5
+msgid "Clipping"
+msgstr "Клипинг"
+
+#: app/templates/components/menu.html:6
+msgid "Analysis"
+msgstr "Анализа"
+
+#: app/templates/components/menu.html:42
+msgid "Account settings"
+msgstr "Кориснички подесувања"
+
+#: app/templates/components/menu.html:43
+msgid "Logout"
+msgstr "Осјава"
+
+#: app/templates/components/menu.html:47
+msgid "Log In"
+msgstr "Најава"
 
 #: app/templates/errors/401.html:3 app/templates/errors/401.html:9
 msgid "Unauthorized"
