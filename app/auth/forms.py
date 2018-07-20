@@ -7,7 +7,7 @@ from app.user.models import User
 
 
 class LoginForm(Form):
-    username = TextField(gettext('Username'), validators=[DataRequired()])
+    email = TextField(gettext('Email'), validators=[DataRequired()])
     password = PasswordField(gettext('Password'), validators=[DataRequired()])
 
     def __init__(self, *args, **kwargs):
@@ -19,10 +19,10 @@ class LoginForm(Form):
         if not rv:
             return False
 
-        self.user = User.query.filter_by(username=self.username.data).first()
+        self.user = User.query.filter_by(email=self.email.data).first()
 
         if not self.user:
-            self.username.errors.append(gettext('Unknown username'))
+            self.email.errors.append(gettext('Unknown user'))
             return False
 
         if not self.user.check_password(self.password.data):

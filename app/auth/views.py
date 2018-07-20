@@ -25,7 +25,7 @@ def login():
         flash(
             gettext(
                 'You were logged in as {username}'.format(
-                    username=form.user.username
+                    username=form.user.email
                 ),
             ),
             'success'
