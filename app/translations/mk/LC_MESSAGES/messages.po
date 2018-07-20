@@ -102,11 +102,11 @@ msgstr "Анализа"
 
 #: app/templates/components/menu.html:42
 msgid "Account settings"
-msgstr "Кориснички подесувања"
+msgstr "Подесувања"
 
 #: app/templates/components/menu.html:43
 msgid "Logout"
-msgstr "Осјава"
+msgstr "Одјава"
 
 #: app/templates/components/menu.html:47
 msgid "Log In"
