@@ -14,3 +14,18 @@ body {
     top: -12px;
     margin-left: 10px;
 }
+
+.panel-flat > .panel-heading {
+    padding: 10px;
+}
+
+
+
+.panel-body {
+    padding: 0;
+}
+
+.article_title {
+    font-size: 18px;
+    font-weight: 600;
+}
