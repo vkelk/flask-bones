@@ -12,6 +12,7 @@ class Mediums(db.Model):
     is_active = db.Column(db.Boolean, default=True)
     charset = db.Column(db.String(8), default='utf-8')
     language = db.Column(db.String(2), default='mk')
+    articles = db.relationship('Articles', backref='medium', lazy=True)
 
 
 class Articles(db.Model):
