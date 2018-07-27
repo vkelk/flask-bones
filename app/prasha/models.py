@@ -50,6 +50,11 @@ class Clients(db.Model):
                          default=''.join(secrets.choice(string.ascii_uppercase + string.digits) for _ in range(5)))
     created = db.Column(db.DateTime, default=datetime.utcnow)
 
+    def __init__(self, name, phone, address):
+        self.name = name
+        self.phone = phone
+        self.address = address
+
 
 class ClientKeywords(db.Model):
     id = db.Column(db.Integer, primary_key=True)
